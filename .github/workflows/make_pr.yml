@@ -19,15 +19,15 @@ jobs:
       - name: Android アプリリポジトリチェックアウト
         uses: actions/checkout@v3
         with:
-          repository: tfandkusu/ga913-android
+          repository: kouki4416/ga913-android
           token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }}
           path: ga913-android
-      - name: iOS アプリリポジトリチェックアウト
-        uses: actions/checkout@v3
-        with:
-          repository: tfandkusu/ga913-ios
-          token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }}
-          path: ga913-ios
+#      - name: iOS アプリリポジトリチェックアウト
+#        uses: actions/checkout@v3
+#        with:
+#          repository: kouki4416/ga913-ios
+#          token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }}
+#          path: ga913-ios
       - name: Android 向けイベントクラスと iOS 向けイベント構造体を作成
         run: ./gradlew run --args make
       - name: Android アプリのフォーマット整え
@@ -54,24 +54,24 @@ jobs:
         working-directory: ga913-android
         env:
           GH_TOKEN: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }}
-      - name: iOS アプリリポジトリにコミット
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git checkout -b update_analytics_event_struct
-          git add .
-          git commit -m "Analytics イベント構造体を更新"
-        working-directory: ga913-ios
-        continue-on-error: true
-      - name: iOS アプリリポジトリにプッシュ
-        run: git push -f origin update_analytics_event_struct
-        working-directory: ga913-ios
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }}
-      - name: iOS アプリリポジトリにプルリクエストを作成する
-        run: gh pr create --title "[自動生成]Analytics イベント構造体を更新" --body "Analytics イベント構造体が自動生成されました。問題が無ければマージしてください。" --base main
-        continue-on-error: true # すでにあれば作成しない
-        working-directory: ga913-ios
-        env:
-          GH_TOKEN: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }}
+#      - name: iOS アプリリポジトリにコミット
+#        run: |
+#          git config user.name "github-actions"
+#          git config user.email "github-actions@github.com"
+#          git checkout -b update_analytics_event_struct
+#          git add .
+#          git commit -m "Analytics イベント構造体を更新"
+#        working-directory: ga913-ios
+#        continue-on-error: true
+#      - name: iOS アプリリポジトリにプッシュ
+#        run: git push -f origin update_analytics_event_struct
+#        working-directory: ga913-ios
+#        continue-on-error: true
+#        env:
+#          GH_TOKEN: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }}
+#      - name: iOS アプリリポジトリにプルリクエストを作成する
+#        run: gh pr create --title "[自動生成]Analytics イベント構造体を更新" --body "Analytics イベント構造体が自動生成されました。問題が無ければマージしてください。" --base main
+#        continue-on-error: true # すでにあれば作成しない
+#        working-directory: ga913-ios
+#        env:
+#          GH_TOKEN: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }}
