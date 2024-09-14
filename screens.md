@@ -6,3 +6,4 @@
 | ランドマーク詳細画面 | LandmarkDetail |  |
 | 設定画面 | Setting | ○ |
 | 情報画面 | Info |  |
+| テストログ | Test | ○ |
