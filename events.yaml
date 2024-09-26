@@ -14,7 +14,7 @@
   class: LandmarkDetail
   value: LandmarkDetail
   actions:
-    - description: いいねを付ける
+    - description: いいねを付けるボタン
       class: FavoriteOn
       value: FavoriteOn
       conversion: true
