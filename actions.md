@@ -10,7 +10,7 @@
 
 | 操作内容 | Analytics イベント名 | パラメータ | コンバージョンイベント |
 | -- | -- | -- | -- |
-| いいねを付ける | LandmarkDetailFavoriteOn | ランドマークの ID id: Int<br>ランドマークの名前 name: String<br> | ○ |
+| いいねを付けるボタン | LandmarkDetailFavoriteOn | ランドマークの ID id: Int<br>ランドマークの名前 name: String<br> | ○ |
 | いいねを解除する | LandmarkDetailFavoriteOff | ランドマークの ID id: Int<br>ランドマークの名前 name: String<br> |  |
 
 ## 情報画面

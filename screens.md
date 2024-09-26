@@ -6,4 +6,6 @@
 | ランドマーク詳細画面 | LandmarkDetail |  |
 | 設定画面 | Setting | ○ |
 | 情報画面 | Info |  |
-| テストログ | Test | ○ |
+| テスト画面1 | Test1 | ○ |
+| テスト画面2 | Test2 | ○ |
+| freeeホーム画面 | FreeeHomeScreen | ○ |
