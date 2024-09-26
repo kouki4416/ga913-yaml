@@ -51,7 +51,12 @@
     - description: プライバシーポリシーを表示する
       class: PrivacyPolicy
       value: PrivacyPolicy
-- description: テストログ
-  class: Test
-  value: Test
+- description: テスト画面1
+  class: Test1
+  value: Test1
+  conversion: true
+
+- description: テスト画面2
+  class: Test2
+  value: Test2
   conversion: true
