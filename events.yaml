@@ -60,3 +60,8 @@
   class: Test2
   value: Test2
   conversion: true
+
+- description: freeeホーム画面
+  class: FreeeHomeScreen
+  value: FreeeHomeScreen
+  conversion: true
